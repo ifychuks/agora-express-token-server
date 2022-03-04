@@ -5,8 +5,8 @@ const app = express();
 app.use(express.json());
 
 app.post("/rtctoken", (req, res) => {
-  const appID = "e004df68b67841a1b6ea7c08b7225814";
-  const appCertificate = "521c7307f1d547e080c34585dd20662e";
+  const appID = "bfbb5bac6f974347a289770aa9331848";
+  const appCertificate = "3f39ff993b7e4bc49f723b6088536f5b";
   const expirationTimeInSeconds = 3600;
   const uid = Math.floor(Math.random() * 100000);
   const role = req.body.isPublisher ? Agora.RtcRole.PUBLISHER : Agora.RtcRole.SUBSCRIBER;
@@ -19,8 +19,8 @@ app.post("/rtctoken", (req, res) => {
 });
 
 app.post("/rtmtoken", (req, res) => {
-  const appID = "e004df68b67841a1b6ea7c08b7225814";
-  const appCertificate = "521c7307f1d547e080c34585dd20662e";
+  const appID = "bfbb5bac6f974347a289770aa9331848";
+  const appCertificate = "3f39ff993b7e4bc49f723b6088536f5b";
   const user = req.body.user;
   const role = Agora.RtmRole.Rtm_User;
   const expirationTimeInSeconds = 3600;
